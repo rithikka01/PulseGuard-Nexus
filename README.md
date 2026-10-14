@@ -2,6 +2,13 @@
 
 PulseGuard Nexus is a Flask-based web application designed to provide a centralized dashboard for monitoring industrial IoT assets, alerts, system status, maintenance, and anomaly information.
 
+
+
+**🚀 Live Demo:** https://pulseguard-nexus.onrender.com
+
+**💻 Source Code:** https://github.com/rithikka01/PulseGuard-Nexus
+
+
 ## Features
 
 - Industrial IoT monitoring dashboard
