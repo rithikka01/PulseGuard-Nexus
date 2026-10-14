@@ -1,65 +1,162 @@
-# PulseGuard Nexus — Industrial IoT Command Center
+# ⚡ PulseGuard Nexus — Industrial IoT Command Center
 
-PulseGuard Nexus is a Flask-based web application designed to provide a centralized dashboard for monitoring industrial IoT assets, alerts, system status, maintenance, and anomaly information.
+**A Flask-based industrial IoT monitoring dashboard for asset management, system health, maintenance tracking, alerts, and anomaly monitoring.**
 
+<p align="center">
+  <a href="https://pulseguard-nexus.onrender.com">🚀 Live Demo</a> •
+  <a href="https://github.com/rithikka01/PulseGuard-Nexus">💻 GitHub Repository</a>
+</p>
 
+---
 
-**🚀 Live Demo:** https://pulseguard-nexus.onrender.com
+## 📌 Overview
 
-**💻 Source Code:** https://github.com/rithikka01/PulseGuard-Nexus
+PulseGuard Nexus is a web-based Industrial IoT Command Center designed to bring asset monitoring and operational insights into a centralized dashboard. It combines a Python Flask backend, an interactive web interface, SQLite database integration, and an AI analysis integration using Groq.
 
+## ✨ Features
 
-## Features
+- **Monitoring Dashboard** — View system status, uptime, and critical alert indicators.
+- **Asset Inventory** — Access the industrial asset management interface.
+- **Alert Management** — View and track critical alerts.
+- **Anomaly Monitoring** — Access anomaly-related information through API endpoints.
+- **Maintenance Tracking** — Maintenance-related API integration.
+- **Claims Management** — Claims-related API integration.
+- **AI-Powered Analysis** — Groq API integration for AI-assisted analysis.
+- **Database Integration** — SQLite for local data storage.
+- **Responsive Web Interface** — Dashboard built using HTML, CSS, and JavaScript.
 
-- Industrial IoT monitoring dashboard
-- Asset inventory management interface
-- Alerts and anomaly monitoring
-- Maintenance and claims API endpoints
-- SQLite database integration
-- AI-powered analysis integration using Groq
+## 🛠️ Tech Stack
 
-## Tech Stack
+| Category | Technologies |
+|---|---|
+| Backend | Python, Flask, Flask-CORS |
+| Frontend | HTML, CSS, JavaScript |
+| Database | SQLite |
+| AI Integration | Groq API |
+| System Monitoring | psutil |
+| HTTP Requests | Requests |
+| Deployment | Render |
+| Version Control | Git, GitHub |
 
-- **Backend:** Python, Flask, Flask-CORS
-- **Frontend:** HTML, CSS, JavaScript
-- **Database:** SQLite
-- **System monitoring:** psutil
-- **AI integration:** Groq API
+## 🏗️ Architecture
 
-## Run Locally
+```text
+User
+  │
+  ▼
+Web Dashboard
+(HTML, CSS, JavaScript)
+  │
+  ▼
+Flask Application
+(Python, REST API)
+  │
+  ├── SQLite Database
+  ├── System Monitoring
+  └── Groq AI Integration
+```
 
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/rithikka01/PulseGuard-Nexus.git
-   cd PulseGuard-Nexus
-   ```
+## 🚀 Live Demo
 
-2. Create and activate a virtual environment, then install dependencies:
-   ```bash
-   python -m venv .venv
-   ```
+**Try the deployed application:**
 
-   Windows:
-   ```bash
-   .venv\Scripts\activate
-   ```
+👉 https://pulseguard-nexus.onrender.com
 
-   Install packages:
-   ```bash
-   pip install -r requirements.txt
-   ```
+The application is hosted on Render. The free service may take some time to respond after periods of inactivity.
 
-3. Start the application:
-   ```bash
-   python app.py
-   ```
+## 💻 Run Locally
 
-4. Open `http://127.0.0.1:8080` in your browser.
+### Prerequisites
 
-## Configuration
+- Python 3.10 or later
+- Git
+- pip
 
-Set any required API keys as environment variables. Do not commit secrets to GitHub.
+### 1. Clone the repository
 
-## Project Status
+```bash
+git clone https://github.com/rithikka01/PulseGuard-Nexus.git
+cd PulseGuard-Nexus
+```
 
-Local application running; public deployment pending.
+### 2. Create a virtual environment
+
+```bash
+python -m venv .venv
+```
+
+Activate it on Windows:
+
+```bash
+.venv\Scripts\activate
+```
+
+### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Configure environment variables
+
+If your AI analysis feature requires a Groq API key, configure it as an environment variable. Never commit API keys or other secrets to GitHub.
+
+### 5. Start the application
+
+```bash
+python app.py
+```
+
+Open the following URL in your browser:
+
+```text
+http://127.0.0.1:8080
+```
+
+## 📁 Project Structure
+
+```text
+PulseGuard-Nexus/
+├── app.py
+├── requirements.txt
+├── README.md
+├── .gitignore
+└── presentation/
+    └── project-presentation.pptx
+```
+
+The presentation folder is optional. Add it when your actual PowerPoint file is ready.
+
+## ☁️ Deployment
+
+The application is deployed on **Render** using Gunicorn as the WSGI server.
+
+- **Build command:** `pip install -r requirements.txt`
+- **Start command:** `gunicorn app:app --bind 0.0.0.0:$PORT`
+
+## 🔒 Security Notes
+
+- Keep API keys and credentials out of source control.
+- Configure secrets through environment variables.
+- Use persistent storage or a suitable production database when persistent data is required.
+- Review database initialization logic before production deployment.
+
+## 🔮 Future Enhancements
+
+- Real-time IoT sensor integration.
+- Enhanced asset health analytics.
+- Interactive anomaly visualizations.
+- Role-based authentication and access control.
+- Persistent production database integration.
+- Automated testing and monitoring.
+
+## 👩‍💻 Author
+
+**Rithikka N.**
+
+- GitHub: [@rithikka01](https://github.com/rithikka01)
+- LinkedIn: [Rithikka N.](https://www.linkedin.com/in/rithikka-n-7018a2257/)
+
+---
+
+⭐ If you find this project interesting, consider starring the repository!
